@@ -1,6 +1,7 @@
 $color-dark: #242424;
 $color-gold: #c5a781;
 $color-silver: #ababab;
+$color-gray: #eee;
 /* высота меню */
 $top-menu-height: 100px;
 
@@ -218,10 +219,66 @@ h6 a:hover {
 }
 
 /*
-	блок с приветствием
+	приветствие
 */
+.hello {
+	padding-top: 30px;
+}
+
 .hello span {
 	padding: 1px 5px;
 	color: #fff;
 	background-color: $color-gold;
+}
+
+/*
+	галерея работ
+*/
+.gallery {
+	padding-top: 50px;
+}
+
+.gallery div:last-of-type  {
+	padding-top: 10px;
+}
+
+/*
+	отзывы
+*/
+
+.reviews {
+	padding: 50px 0 40px 0;
+}
+
+.reviews .orbit-previous,
+.reviews .orbit-next {
+	color: #0a0a0a;
+}
+
+.reviews .orbit-bullets button {
+	width: .5rem;
+	height: .5rem;
+	margin: .1rem;
+	border-radius: 50%;
+	background-color: $color-silver;
+}
+
+.reviews .orbit-bullets button.is-active {
+	background-color: $color-dark;
+}
+
+.reviews .orbit-slide .grid-x {
+	padding: 0 50px;
+}
+
+.reviews h3 {
+	font-weight: 500;
+}
+
+.reviews .reviews-stars {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    color: $color-gold;
+    padding-bottom: 30px;
 }
