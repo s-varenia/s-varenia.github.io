@@ -54,6 +54,9 @@ h6 a:hover {
   transition: .25s ease-in-out;
 }
 
+/*
+	верхнее меню сайта
+*/
 .header {
   font-family: 'Roboto', sans-serif;
   position: relative;
@@ -119,7 +122,7 @@ h6 a:hover {
 }
 
 /*
-	BTN MENU
+	кнопка верхнего меню
 */
 #btn-menu {
   width: 32px;
@@ -181,5 +184,14 @@ h6 a:hover {
   transform: rotate(-45deg);
   top: 22.5px;
   left: 0px;
+}
+
+/*
+	блок с приветствием
+*/
+.hello span {
+  padding: 1px 5px;
+  color: #fff;
+  background-color: #c5a781;
 }
 /*# sourceMappingURL=style.css.map */
