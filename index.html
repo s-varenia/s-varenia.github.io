@@ -249,16 +249,20 @@
 			});
 
 			//карусель
+			var startWidthOrbitCont = $('.orbit-container').width();
 			$(window).resize(function() {
-				// находим высоту всех блоков
-				var heights = $("li.orbit-slide").map(function (){
-					$(this).removeAttr('style')
-					return $(this).height();
-				}).get();
-				// получаем максимальную высоту
-				maxHeight = Math.max.apply(null, heights);
-				// применяем высоту к родительскому контейнеру
-				$('.orbit-container').height(maxHeight)
+				if( startWidthOrbitCont !== $('.orbit-container').width()) {
+					console.log('ширина поменялась');
+					// находим высоту всех блоков
+					let heights = $('li.orbit-slide').map(function (){
+						$(this).removeAttr('style');
+						return $(this).height();
+					}).get();
+					// получаем максимальную высоту
+					let maxHeight = Math.max.apply(null, heights);
+					// применяем высоту к родительскому контейнеру
+					$('.orbit-container').height(maxHeight)
+				}
 			});
 		});
 	</script>
