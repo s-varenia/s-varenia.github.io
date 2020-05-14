@@ -150,28 +150,28 @@ h6 a:hover {
 }
 
 #btn-menu span:nth-child(1) {
-  top: 2px;
+  top: 0px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
 #btn-menu span:nth-child(2) {
-  top: 11px;
+  top: 11.25px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
 #btn-menu span:nth-child(3) {
-  top: 20px;
+  top: 22.5px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
 #btn-menu.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
   top: 0px;
   left: 0px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #btn-menu.open span:nth-child(2) {
@@ -180,10 +180,10 @@ h6 a:hover {
 }
 
 #btn-menu.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
   top: 22.5px;
   left: 0px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /*
@@ -234,12 +234,12 @@ h6 a:hover {
   background-color: #242424;
 }
 
-.reviews .orbit-slide .grid-x {
-  padding: 0 50px;
-}
-
 .reviews h3 {
   font-weight: 500;
+}
+
+.reviews .orbit-slide div {
+  padding: 0 40px;
 }
 
 .reviews .reviews-stars {
