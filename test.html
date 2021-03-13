@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function httpGet(theUrl)
+		{
+			if (window.XMLHttpRequest)
+			{// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp=new XMLHttpRequest();
+			}
+			else
+			{// code for IE6, IE5
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					return xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET", theUrl, false );
+			xmlhttp.send();    
+		}
+
+		document.getElementById("result").innerHTML = httpGet("https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/md/index.md");
+	</script>
+</head>
+<body>
+	<div id="result"></div>
+</body>
+</html>
