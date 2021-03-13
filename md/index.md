@@ -18,7 +18,7 @@
 ***
 ![Это картинка](https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png)
 ***
-Внутри текста **[ссылка](www.google.com)**
+Внутри текста **[ссылка](https://www.google.com/)**
 
 ```
 function hello()
