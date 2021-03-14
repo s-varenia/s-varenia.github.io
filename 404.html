@@ -22,7 +22,7 @@
 	<script>
 		var converter = new showdown.Converter({customizedHeaderId: true});
 
-		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/help/index.md')
+		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/help/Шпора - Markdown синтаксис - md.md')
 		.then(response => response.json())
 		.then(data => {
 			var md = decodeURIComponent(escape(atob(data.content)));
