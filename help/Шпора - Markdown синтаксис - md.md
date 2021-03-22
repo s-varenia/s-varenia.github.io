@@ -1,3 +1,7 @@
+<!-- 
+https://www.markdownguide.org/basic-syntax/
+https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html
+-->
 | MD синтаксис | Результат |
 | :----------- | :-------- |
 | ***Заголовки*** |
