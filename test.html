@@ -19,12 +19,17 @@
 			method: "GET",
 			data: {"test":"hello", "test2":"Привет & как дела"},
 			dataType: "jsonp",
-			success: loadData
+			success: loadData,
+			error: errorData
 		});
 
 		// log the returned data
 		function loadData(e) {
-			if(e) console.log('Привет ' + e.user); else console.log('Привет незнвкомец');
+			console.log('Привет ' + e.user);
+		}
+
+		function errorData(e) {
+			console.log('Привет незнвкомец');
 		}
 	</script>
 </body>
