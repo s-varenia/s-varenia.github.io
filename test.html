@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тестовая страница</title>
+</head>
+<body>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		// https://api.jquery.com/jquery.ajax/
+		var url = "https://script.google.com/macros/s/AKfycbyKP8I6n7I4G6e0oWbzatrxfM1jRb9GAml5Y5TIVvQ/dev";
+		// Make an AJAX call to Google Script
+		jQuery.ajax({
+			crossDomain: true,
+			url: url,
+			method: "GET",
+			data: {"test":"hello", "test2":"Привет & как дела"},
+			dataType: "jsonp",
+			success: loadData
+		});
+
+		// log the returned data
+		function loadData(e) {
+			console.log(e);
+		}
+	</script>
+</body>
+</html>
