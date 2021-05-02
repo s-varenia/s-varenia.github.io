@@ -10,27 +10,34 @@
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
-		// https://api.jquery.com/jquery.ajax/
-		var url = "https://script.google.com/macros/s/AKfycbyKP8I6n7I4G6e0oWbzatrxfM1jRb9GAml5Y5TIVvQ/dev";
-		// Make an AJAX call to Google Script
-		jQuery.ajax({
-			crossDomain: true,
-			url: url,
-			method: "GET",
-			data: {"test":"hello", "test2":"Привет & как дела"},
-			dataType: "jsonp",
-			success: loadData,
-			error: errorData
-		});
+		// // https://api.jquery.com/jquery.ajax/
+		// var url = "https://script.google.com/macros/s/AKfycbyKP8I6n7I4G6e0oWbzatrxfM1jRb9GAml5Y5TIVvQ/dev";
+		// // Make an AJAX call to Google Script
+		// jQuery.ajax({
+		// 	crossDomain: true,
+		// 	url: url,
+		// 	method: "GET",
+		// 	data: {"test":"hello", "test2":"Привет & как дела"},
+		// 	dataType: "jsonp",
+		// 	success: loadData,
+		// 	error: errorData
+		// });
 
-		// log the returned data
-		function loadData(e) {
-			console.log('Привет ' + e.user);
-		}
+		// // log the returned data
+		// function loadData(e) {
+		// 	console.log('Привет ' + e.user);
+		// }
 
-		function errorData(e) {
-			console.log('Привет незнакомец');
-		}
+		// function errorData(e) {
+		// 	console.log('Привет незнакомец');
+		// }
+
+		fetch('https://script.google.com/macros/s/AKfycbyKP8I6n7I4G6e0oWbzatrxfM1jRb9GAml5Y5TIVvQ/dev')
+		.then(response => response.json())
+		.then(data => {
+			console.log(data); // Prints result from `response.json()` in getRequest
+		})
+		.catch(error => console.error(error))
 	</script>
 </body>
 </html>
