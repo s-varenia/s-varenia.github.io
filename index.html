@@ -311,7 +311,11 @@
 
 			// The ID token you need to pass to your backend:
 			var id_token = googleUser.getAuthResponse().id_token;
+			var exp_in = googleUser.getAuthResponse().expires_in;
+			var exp_at = googleUser.getAuthResponse().expires_at;
 			console.log("ID Token: " + id_token);
+			console.log("Time Start Token: " + exp_in);
+			console.log("Time End Token: " + exp_at);
 		}
 
 		function signOut() {
