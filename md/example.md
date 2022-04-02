@@ -11,7 +11,7 @@
 
 ---
 
-Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.  Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
 
 ---
 
@@ -109,6 +109,20 @@ function hello()
 Вот предложение со сноской. [^1]
 
 [^1]: Это сноска.
+
+![Alt text][id]
+![Alt text][id2]
+
+[id]:
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+[id2]:
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
+AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
+
+this text needs to be separated from the references by 2 newlines
 
 ---
 

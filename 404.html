@@ -21,7 +21,11 @@
 	<script>
 		var converter = new showdown.Converter({
 			customizedHeaderId: true, // возможность добавлять ID
-			tables: true // поддержка таблиц
+			tables: true, // поддержка таблиц
+			strikethrough: true, // включить перечеркивание
+			tasklists: true, // включить список с галочками
+			simpleLineBreaks: true, // два пробела как перенос
+			backslashEscapesHTMLTags: true // поддержка экранирование тегов
 		});
 
 		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/md/example.md')
