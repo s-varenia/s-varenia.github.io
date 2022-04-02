@@ -1,16 +1,44 @@
 # Заголовок 1 {hello}
 ## Заголовок 2
 ### Заголовок 3
-#### Заголовок 4 {link}
+#### Заголовок 4
 ##### Заголовок 5
 ###### Заголовок 6
 
-# Это заголовок I am Sergey
+---
 
-Текст **жирный**
-> Это цитата
+### My Great Heading {#custom-id}
 
-Маркированы список
+---
+
+Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+
+---
+
+**Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.**
+
+---
+
+***Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.***
+
+---
+
+*Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.*
+
+---
+
+~~Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.~~
+
+---
+
+>Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+
+---
+
+I need to highlight these ==very important words==.
+
+---
+
 1. Первый
 1. Второй
 1. тест
@@ -18,20 +46,86 @@
 	- Первый
 	+ Второй
 	* Третий
-***
+
+---
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+---
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+---
+
+[Ссылка](https://www.example.com)
+
+---
+
+Ссылка внутри страницы [ссылка](#link)
+
+---
+
 ![Это картинка](https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png)
-***
+
+---
+
 Внутри текста **[ссылка](https://www.google.com/)**
+
+---
+
+`code`
+
+---
 
 ```
 function hello()
 {
-	var x;
+	alert('Hello!');
 }
 ```
 
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+---
+
 \```
 
-Ссылка внутри страницы [ссылка](#link)
+---
 
-I am Sergey
+Вот предложение со сноской. [^1]
+
+[^1]: Это сноска.
+
+---
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+---
+
+H~2~O
+
+X^2^
+
+---
+
+`http://www.example.com`
+
+<fake@example.com>
+
+<https://www.markdownguide.org>
