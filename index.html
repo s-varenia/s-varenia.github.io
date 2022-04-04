@@ -27,6 +27,8 @@
 				credentials: 'same-origin', // include, *same-origin, omit
 				headers: {
 					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+					'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
 					'Content-Type': 'application/json'
 					// 'Content-Type': 'application/x-www-form-urlencoded',
 				},
@@ -37,7 +39,7 @@
 			return response.json(); // parses JSON response into native JavaScript objects
 		}
 
-		postData('https://script.google.com/macros/s/AKfycbyFbF4jr5p7YnuKtCz9zjf4aNpHj88hxWbi19j_T9gPwIiecjGUv2N8wFsA91fYrMWN7Q/exec', {
+		postData('https://script.google.com/macros/s/AKfycbykSw6JgakvsCIDgoDQYetLFWM0hAp4Ut2UTtULWXsS/dev', {
 				test: 100
 			})
 			.then(data => {
