@@ -88,12 +88,18 @@
 			.then(data => {
 				var md = decodeURIComponent(escape(atob(data.content)));
 				var html = converter.makeHtml(md);
-				document.getElementById("result").innerHTML = html;
+				document.getElementById('result').innerHTML = html;
+
+				var script = document.createElement('script');
+					script.type = 'text/javascript';
+					script.src = 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autorun=true';
+
+				document.getElementsByTagName('body')[0].appendChild(script);
+
 				console.log(data); // Prints result from `response.json()` in getRequest
 			})
 			.catch(error => console.error(error))
 	</script>
-	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autorun=true"></script>
 </body>
 
 </html>
