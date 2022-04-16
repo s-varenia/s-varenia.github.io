@@ -103,7 +103,7 @@ SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=)
 
 ---
 
-```
+```javascript
 function hello()
 {
 	alert('Hello!');
