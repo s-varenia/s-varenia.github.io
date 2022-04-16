@@ -17,7 +17,7 @@
 
 ---
 
-[Ссылка на заголовок 4](#test1)
+[Внутренняя ссылка на заголовок 4](#test1)
 
 ---
 
@@ -87,13 +87,11 @@ Second Term
 
 ---
 
+Изображение в формате **base64**:
+
 ![Alt text](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
 jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAY
 SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=)
-
----
-
-Внутри текста **[ссылка](https://www.google.com/)**
 
 ---
 
