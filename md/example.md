@@ -110,11 +110,12 @@ function hello()
 }
 ```
 
-```json
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
+```css
+.box {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
 }
 ```
 
