@@ -95,7 +95,7 @@ SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=)
 
 ---
 
-![image](https://github.com/s-varenia/s-varenia.github.io/raw/master/img/Sat_Apr_16_2022_1650116069107.png)
+![image](https://github.com/s-varenia/s-varenia.github.io/raw/master/images/Sat_Apr_16_2022_1650116958836.png)
 
 ---
 
