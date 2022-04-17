@@ -13,7 +13,7 @@ Nullam id interdum ante, rhoncus blandit leo. Sed finibus ligula ac sem semper t
 
 Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gravida magna quis elementum pulvinar. Sed vulputate congue urna, in maximus lorem feugiat nec. Vivamus elit velit, fermentum in massa sed, ornare pretium ex. Duis in nisi a quam scelerisque mattis et at leo. Nullam rhoncus, diam sed accumsan fermentum, leo erat consectetur ipsum, quis tristique turpis eros convallis sem. Proin purus neque, pulvinar et urna quis, blandit mattis eros.
 
-Обычный текст, *курсив*, **жирный**, ***жирный курсив***, ~~перечеркнутый~~, [ссылка](https://www.google.com)
+Обычный текст, *курсив*, **жирный**, ***жирный курсив***, ~~перечеркнутый~~, [ссылка](https://www.google.com), `code in line`
 
 1. Нумированый список 1
 2. Нумированый список 2
@@ -47,5 +47,35 @@ alert(s);
 s = "Python syntax highlighting"
 print s
 ```
+
+| Таблица        | Колонка 1           | Колонка 2  |
+| ---            |:---:                | ---:       |
+| col 3 is       | right-aligned       | $1600      |
+| col 2 is       | centered            |   $12      |
+| zebra stripes  | are neat            |    $1      |
+
+> Цітата. This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+H~2~O
+
+X^2^
+
+`http://www.example.com`
+
+<fake@example.com>
+
+<https://www.markdownguide.org>
+
+![Это картинка](https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png)
+
+![Картинка в base64](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAY
+SURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=)
+
+---
 
 [1]: https://www.markdownguide.org/basic-syntax/
