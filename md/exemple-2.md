@@ -25,6 +25,14 @@ Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gra
 5. Нумированый список 5
 6. Нумированый список 6
 
+---
+
+* Не нумированый список
+- Or minuses
++ Or pluses
+
+---
+
 [Простая ссылка](https://www.google.com)
 
 [Ссылка с подсказкой (title)](https://www.google.com "Google's Homepage")
