@@ -210,7 +210,17 @@ Blocks of code are either fenced by lines with three back-ticks ```, or are inde
     print s  
 
     No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
-    But let's throw in a tag. 
+    But let's throw in a tag.
+
+	```javascript
+	var s = "JavaScript syntax highlighting";
+	alert(s);
+	```
+
+	```python
+	s = "Python syntax highlighting"
+	print s
+	```
 
 ## Tables
 
