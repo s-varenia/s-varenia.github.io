@@ -31,4 +31,21 @@ Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gra
 
 [Относительная ссылка](../blob/master/LICENSE)
 
+```
+<!-- код без тега -->
+<h1>Hello World!</h>
+```
+
+```javascript
+// код с тегом javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+# код с тегом python
+s = "Python syntax highlighting"
+print s
+```
+
 [1]: https://www.markdownguide.org/basic-syntax/
