@@ -370,8 +370,7 @@ Github Flavored Markdown
 [22]: #ref-2
 [23]: https://codepen.io/atelierbram/pen/hrqcH
 [24]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1"
-[25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2" 
-
+[25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ---
 
