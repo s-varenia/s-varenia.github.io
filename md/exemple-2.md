@@ -48,17 +48,25 @@ s = "Python syntax highlighting"
 print s
 ```
 
+---
+
 | Таблица        | Колонка 1           | Колонка 2  |
 | ---            |:---:                | ---:       |
 | col 3 is       | right-aligned       | $1600      |
 | col 2 is       | centered            |   $12      |
 | zebra stripes  | are neat            |    $1      |
 
+---
+
 > Цітата. This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+
+---
 
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+
+---
 
 H~2~O
 
@@ -69,6 +77,8 @@ X^2^
 <fake@example.com>
 
 <https://www.markdownguide.org>
+
+---
 
 ![Это картинка](https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png)
 
