@@ -11,7 +11,7 @@ Nullam id interdum ante, rhoncus blandit leo. Sed finibus ligula ac sem semper t
 
 Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gravida magna quis elementum pulvinar. Sed vulputate congue urna, in maximus lorem feugiat nec. Vivamus elit velit, fermentum in massa sed, ornare pretium ex. Duis in nisi a quam scelerisque mattis et at leo. Nullam rhoncus, diam sed accumsan fermentum, leo erat consectetur ipsum, quis tristique turpis eros convallis sem. Proin purus neque, pulvinar et urna quis, blandit mattis eros.
 
-Обычный текст, *курсив*, **жирный**, ***жирный курсив***, ~~перечеркнутый~~
+Обычный текст, *курсив*, **жирный**, ***жирный курсив***, ~~перечеркнутый~~, [ссылка](https://www.google.com)
 
 1. Нумированый список 1
 2. Нумированый список 2
@@ -22,3 +22,13 @@ Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gra
 4. Нумированый список 4
 5. Нумированый список 5
 6. Нумированый список 6
+
+[Простая ссылка](https://www.google.com)
+
+[Ссылка с подсказкой](https://www.google.com "Google's Homepage")
+
+[Относительная ссылка](../blob/master/LICENSE)
+
+### [Ссылка в заголовке][1]
+
+[1]: https://www.markdownguide.org/basic-syntax/
