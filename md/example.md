@@ -24,6 +24,7 @@ This is intended as a quick reference and showcase. For more complete info, see 
 * [Horizontal-Rules][14]
 * [Line-Breaks][15]
 * [Videos][16]
+* [Мои примеры][26]
 
 ## Headers
 
@@ -385,6 +386,7 @@ Github Flavored Markdown
 [23]: https://codepen.io/atelierbram/pen/hrqcH
 [24]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1"
 [25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[26]: #-
 
 ---
 
