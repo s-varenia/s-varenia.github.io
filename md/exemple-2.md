@@ -12,3 +12,10 @@ Nullam id interdum ante, rhoncus blandit leo. Sed finibus ligula ac sem semper t
 Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gravida magna quis elementum pulvinar. Sed vulputate congue urna, in maximus lorem feugiat nec. Vivamus elit velit, fermentum in massa sed, ornare pretium ex. Duis in nisi a quam scelerisque mattis et at leo. Nullam rhoncus, diam sed accumsan fermentum, leo erat consectetur ipsum, quis tristique turpis eros convallis sem. Proin purus neque, pulvinar et urna quis, blandit mattis eros.
 
 Обычный текст, *курсив*, **жирный**, ***жирный курсив***, ~~перечеркнутый~~
+
+1. Нумированый список 1
+2. Нумированый список 2
+    * Вложеный нумированый список 1
+3. Нумированый список 3
+    1. Вложеный нумированый список 2
+4. Нумированый список 4
