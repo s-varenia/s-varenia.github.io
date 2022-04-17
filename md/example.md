@@ -386,11 +386,11 @@ Github Flavored Markdown
 [23]: https://codepen.io/atelierbram/pen/hrqcH
 [24]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1"
 [25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-[26]: #-
+[26]: #мои-примеры
 
 ---
 
-## Мои проимеры
+## Мои примеры
 
 # Заголовок 1
 ## Заголовок 2
