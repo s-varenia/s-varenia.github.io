@@ -346,7 +346,7 @@ Or, in pure Markdown, but losing the image sizing and border:
 ###### GFM
 Github Flavored Markdown
 
-[18], [19]
+[18], [19], [21]
 
 [1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [2]: http://www.markdown-here.com/livedemo.html
