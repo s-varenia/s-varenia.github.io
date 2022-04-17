@@ -27,7 +27,7 @@ Pellentesque elit lectus, semper et magna quis, luctus accumsan metus. Donec gra
 
 [Простая ссылка](https://www.google.com)
 
-[Ссылка с подсказкой](https://www.google.com "Google's Homepage")
+[Ссылка с подсказкой (title)](https://www.google.com "Google's Homepage")
 
 [Относительная ссылка](../blob/master/LICENSE)
 
