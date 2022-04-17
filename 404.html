@@ -85,7 +85,7 @@
 			extensions: ['myShowdownExt', 'prettify'] // мои расширения и prettify
 		});
 
-		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/md/example-2.md')
+		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/md/exemple-2.md')
 			.then(response => response.json())
 			.then(data => {
 				var md = decodeURIComponent(escape(atob(data.content)));
