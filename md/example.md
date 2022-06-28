@@ -1,3 +1,8 @@
+<!--
+name: Название статьи
+cat: Категория
+tags: ключевые,слова,для поиска
+-->
 # Markdown синтаксис
 
 Документация: [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
