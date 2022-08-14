@@ -305,6 +305,10 @@ h6 {
 	background-position: calc(-3vw - (640px - 25vw)) center;
 	margin-bottom: 80px;
 
+	&__title {
+		font-size: 50px;
+	}
+
 	&__box {
 		background-color: $color-white;
 		padding: 40px 80px;
