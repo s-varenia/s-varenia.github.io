@@ -125,7 +125,7 @@ Note that this line is separate, but within the same paragraph.
 
 ## Links
 
-<!-- абра-кодабра -->
+<!-- regexp -->
 
 There are two ways to create links.
 
