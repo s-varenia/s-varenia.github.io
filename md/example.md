@@ -1,7 +1,7 @@
 <!--
 name: Название статьи
 cat: Категория
-tags: ключевые,слова,для поиска
+tags: ключевые,слова,для поиска, regexp
 -->
 
 # Markdown синтаксис
@@ -124,8 +124,6 @@ Note that this line is separate, but within the same paragraph.
 - Or pluses
 
 ## Links
-
-<!-- regexp -->
 
 There are two ways to create links.
 
