@@ -1,7 +1,7 @@
 <!--
 name: Название статьи
 cat: Категория
-tags: ключевые,слова,для поиска,regexp
+tags: ключевые,слова,для поиска
 -->
 
 # Markdown синтаксис
@@ -32,7 +32,7 @@ This is intended as a quick reference and showcase. For more complete info, see 
 - [Videos][16]
 - [Мои примеры][26]
 
-## Headers regexp
+## Headers
 
     # H1
     ## H2
