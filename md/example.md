@@ -3,6 +3,7 @@ name: Название статьи
 cat: Категория
 tags: ключевые,слова,для поиска
 -->
+
 # Markdown синтаксис
 
 Документация: [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
@@ -17,22 +18,21 @@ This is intended as a quick reference and showcase. For more complete info, see 
 
 ##### Table of Contents
 
-* [Headers][5]
-* [Emphasis][6]
-* [Lists][7]
-* [Links][8]
-* [Images][9]
-* [Code-and-Syntax-Highlighting][10]
-* [Tables][11]
-* [Blockquotes][12]
-* [Inline-HTML][13]
-* [Horizontal-Rules][14]
-* [Line-Breaks][15]
-* [Videos][16]
-* [Мои примеры][26]
+- [Headers][5]
+- [Emphasis][6]
+- [Lists][7]
+- [Links][8]
+- [Images][9]
+- [Code-and-Syntax-Highlighting][10]
+- [Tables][11]
+- [Blockquotes][12]
+- [Inline-HTML][13]
+- [Horizontal-Rules][14]
+- [Line-Breaks][15]
+- [Videos][16]
+- [Мои примеры][26]
 
 ## Headers
-
 
     # H1
     ## H2
@@ -49,7 +49,6 @@ This is intended as a quick reference and showcase. For more complete info, see 
     Alt-H2
     ------
 
-
 # H1
 
 ## H2
@@ -60,16 +59,13 @@ This is intended as a quick reference and showcase. For more complete info, see 
 
 ##### H5
 
-###### H6  
-    
+###### H6
+
 Alternatively, for H1 and H2, an underline-ish style:
 
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
-
+## Alt-H2
 
     Emphasis, aka italics, with *asterisks* or _underscores_.
 
@@ -79,19 +75,17 @@ Alt-H2
 
     Strikethrough uses two tildes. ~~Scratch this.~~
 
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__
+Strong emphasis, aka bold, with **asterisks** or **underscores**
 
 Combined emphasis with **asterisks and _underscores_**.
 
-Strikethrough uses two tildes. <del>Scratch this.   </del>
+Strikethrough uses two tildes. <del>Scratch this. </del>
 
 ## Lists
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
-
 
     1. First ordered list item
     2. Another item
@@ -110,12 +104,11 @@ Strikethrough uses two tildes. <del>Scratch this.   </del>
     - Or minuses
     + Or pluses
 
-
 1. First ordered list item
 2. Another item
-    * Unordered sub-list.
+   - Unordered sub-list.
 3. Actual numbers don't matter, just that it's a number
-    1. Ordered sub-list
+   1. Ordered sub-list
 4. And another item.
 
 You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
@@ -124,14 +117,17 @@ To have a line break without a paragraph, you will need to use two trailing spac
 Note that this line is separate, but within the same paragraph.
 (This is contrary to the typical [GFM][17] line break behaviour, where trailing spaces are not required.)
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 
 ## Links
 
-There are two ways to create links.
+<!-- абра-кодабра -->
 
+There are two ways to create links.
 
     [I'm an inline-style link](https://www.google.com)
 
@@ -163,7 +159,6 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-
     Here's our logo (hover to see the title text):
 
     Inline-style:
@@ -171,9 +166,6 @@ Some text to show that the reference links can follow later.
 
     Reference-style:
     ![alt text][25]
-
-
-
 
 Here's our logo (hover to see the title text):
 
@@ -185,14 +177,11 @@ Reference-style: ![alt text][25]
 
 Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer.
 
-
     Inline `code` has `back-ticks around` it.
-
 
 Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
-
 
     ```javascript
     var s = "JavaScript syntax highlighting";
@@ -206,14 +195,14 @@ Blocks of code are either fenced by lines with three back-ticks ```, or are inde
 
     ```
     No language indicated, so no syntax highlighting.
-    But let's throw in a tag. 
-    ```  
+    But let's throw in a tag.
+    ```
 
     var s = "JavaScript syntax highlighting";
-    alert(s); 
- 
+    alert(s);
+
     s = "Python syntax highlighting"
-    print s  
+    print s
 
     No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
     But let's throw in a tag.
@@ -221,7 +210,7 @@ Blocks of code are either fenced by lines with three back-ticks ```, or are inde
 Hello
 
 ```javascript
-var s = "JavaScript syntax highlighting";
+var s = 'JavaScript syntax highlighting';
 alert(s);
 ```
 
@@ -233,7 +222,6 @@ print s
 ## Tables
 
 Tables aren't part of the core Markdown spec, but they are part of [GFM][17]. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
-
 
     Colons can be used to align columns.
 
@@ -250,19 +238,18 @@ Tables aren't part of the core Markdown spec, but they are part of [GFM][17]. Th
     *Still* | `renders` | **nicely**
     1 | 2 | 3
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 ## Blockquotes
 
@@ -279,16 +266,15 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
-
 ## Inline-HTML
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.  
+You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
       Definition list
       Is something people use sometimes.
 
       Markdown in HTML
-      Does *not* work **very** well. Use HTML _tags_.  
+      Does *not* work **very** well. Use HTML _tags_.
 
 Definition list
 : Is something people use sometimes.
@@ -297,28 +283,30 @@ Markdown in HTML
 : Does \*not\* work \*\*very\*\* well. Use HTML \_tags\_.
 
 ## Horizontal-Rules
- 
+
     Three or more ...
 
-    --- 
+    ---
     Hyphens
 
-    *** 
-    Asterisks 
-    
-    ___ 
-    Underscores 
+    ***
+    Asterisks
 
+    ___
+    Underscores
 
-Three or more ... 
+Three or more ...
 
---- 
-Hyphens 
+---
 
-*** 
-Asterisks 
+Hyphens
 
-___ 
+---
+
+Asterisks
+
+---
+
 Underscores
 
 ## Line-Breaks
@@ -327,7 +315,6 @@ My basic recommendation for learning how line breaks work is to experiment and d
 
 Here are some things to try out:
 
-
     Here's a line for us to start with.
 
     This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
@@ -335,14 +322,12 @@ Here are some things to try out:
     This line is also a separate paragraph, but...
     This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
-
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
 This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
-
 
 ## Videos
 
@@ -354,14 +339,12 @@ They can't be added directly but you can add an image with a link to the video l
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 ```
 
-
 Or, in pure Markdown, but losing the image sizing and border:
-
 
     [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
-
 ###### GFM
+
 Github Flavored Markdown
 
 [link1][18], [link2][19], [link3][21]
@@ -389,8 +372,8 @@ Github Flavored Markdown
 [21]: blob/master/LICENSE
 [22]: #ref-2
 [23]: https://codepen.io/atelierbram/pen/hrqcH
-[24]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1"
-[25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[24]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1'
+[25]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
 [26]: #мои-примеры
 
 ---
@@ -398,10 +381,15 @@ Github Flavored Markdown
 ## Мои примеры
 
 # Заголовок 1
+
 ## Заголовок 2
+
 ### Заголовок 3
+
 #### Заголовок 4
+
 ##### Заголовок 5
+
 ###### Заголовок 6
 
 ---
@@ -414,15 +402,15 @@ Github Flavored Markdown
 
 ---
 
-Ipsum является стандартной "рыбой" для текстов на латинице 
-с начала XVI века. Ipsum является стандартной "рыбой" 
+Ipsum является стандартной "рыбой" для текстов на латинице
+с начала XVI века. Ipsum является стандартной "рыбой"
 для текстов на латинице с начала XVI века.
 
 Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
 
 ---
 
-*Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.*
+_Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века._
 
 ---
 
@@ -430,7 +418,7 @@ Ipsum является стандартной "рыбой" для текстов
 
 ---
 
-***Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.***
+**_Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века._**
 
 ---
 
@@ -446,9 +434,9 @@ Ipsum является стандартной "рыбой" для текстов
 1. Второй
 1. тест
 1. Третий
-	- Первый
-	+ Второй
-	* Третий
+   - Первый
+   * Второй
+   - Третий
 
 ---
 
@@ -461,10 +449,10 @@ Second Term
 
 ---
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 ---
 
@@ -504,8 +492,7 @@ function hello()
 ```
 
 ```javascript
-function hello()
-{
+function hello() {
 	alert('Hello!');
 }
 ```
@@ -521,6 +508,7 @@ function hello()
 
 ```md
 # Hello!
+
 > World!
 ```
 
@@ -558,8 +546,8 @@ X^2^
 <https://www.markdownguide.org>
 
 [md-spec]: http://daringfireball.net/projects/markdown/
-[id]:
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+[id]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7l
+
 jmRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7D
 AcdvqGQAAAAYSURBVBhXYwCC/2AAZYEoOAMs8Z+BgQEAXdcR7/Q1gssAAAAASUVORK5CYII=
 [id2]:
