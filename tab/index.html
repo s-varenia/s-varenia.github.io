@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	class="h-full p-0 m-0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>New Tab</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			defer
+			src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
+	</head>
+	<body class="h-full p-0 m-0">
+		<div
+			class="h-full bg-sky-50 text-gray-800 p-4 lg:p-8"
+			x-data="alpineInstance()"
+			x-init="$watch('search', () => selectedLinkIndex = '')">
+			<!-- begin: search form -->
+			<label class="relative block">
+				<span class="sr-only">Search</span>
+				<span class="absolute inset-y-0 left-0 flex items-center pl-2">
+					<svg
+						class="h-5 w-5 fill-slate-300"
+						viewBox="0 0 20 20">
+						<path
+							fill-rule="evenodd"
+							d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</span>
+				<input
+					class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-300 focus:ring-sky-200 focus:ring-2 sm:text-sm"
+					placeholder="Search for anything..."
+					type="text"
+					name="search"
+					autocomplete="off"
+					x-model="search"
+					x-on:keyup.escape="resetSearch"
+					x-on:keyup.down="selectNextLink"
+					x-on:keyup.up="selectPreviousLink"
+					x-on:keyup.enter="goToUrl" />
+			</label>
+			<!-- 	end: search form -->
+			<div class="flex flex-wrap -mx-2 pb-8">
+				<!-- begin: link card -->
+				<template x-for="(link, index) in filteredLinks">
+					<div
+						class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 h-full font-light"
+						@mouseover="selectedLinkIndex = ''"
+						@click="window.location = link.url">
+						<div
+							class="flex bg-white rounded-lg shadow-md m-2 border-x-4 border-white hover:shadow-xl hover:border-pink-500 cursor-pointer relative"
+							x-bind:class="{'shadow-xl border-pink-500': index === selectedLinkIndex}">
+							<div class="p-4 pr-6 leading-normal truncate">
+								<img
+									class="absolute left-4 top-11"
+									width="16"
+									height="16"
+									x-bind:src="'https://www.google.com/s2/favicons?domain=' + link.url + '&sz=16'" />
+								<div
+									class="font-medium text-lg truncate"
+									x-text="link.title"></div>
+								<div
+									class="pl-6 truncate lowercase text-xs text-gray-500 font-semibold tracking-widest"
+									x-text="link.url"></div>
+							</div>
+						</div>
+					</div>
+				</template>
+				<!-- end: link card -->
+			</div>
+		</div>
+		<script>
+			// https://www.youtube.com/watch?v=ALDB4dtwNs8
+			function alpineInstance() {
+				return {
+					links: [
+						{ url: "https://www.google.com/", title: "Google", category: "category - 3" },
+						{ url: "https://www.facebook.com/", title: "Facebook", category: "category - 1" },
+						{ url: "https://www.youtube.com/", title: "YouTube", category: "category - 2" },
+						{ url: "https://github.com/", title: "Github", category: "category - 2" },
+						{ url: "https://codepen.io/your-work", title: "Codepen", category: "category - 2" },
+						{ url: "https://docsify.js.org/#/ru-ru/", title: "Docsify", category: "category - 3" },
+						{ url: "https://rozetka.com.ua/", title: "Rozetka", category: "category - 1" },
+						{ url: "https://varenia.com/", title: "VARENIA", category: "category - 4" },
+						{ url: "https://apple.com/", title: "Apple", category: "category - 5" },
+						{ url: "https://amazone.com/", title: "Amazone", category: "category - 5" },
+					],
+					search: "",
+					selectedLinkIndex: "",
+					get filteredLinks() {
+						if (this.search === "") return this.links;
+						return this.links.filter(
+							(search) =>
+								search.title.toLowerCase().includes(this.search.toLowerCase()) ||
+								search.url.toLowerCase().includes(this.search.toLowerCase())
+						);
+					},
+					resetSearch() {
+						this.search = "";
+						this.selectedLinkIndex = "";
+					},
+					selectNextLink() {
+						if (this.selectedLinkIndex === "") this.selectedLinkIndex = 0;
+						else this.selectedLinkIndex++;
+
+						if (this.selectedLinkIndex === this.filteredLinks.length) this.selectedLinkIndex = 0;
+					},
+					selectPreviousLink() {
+						if (this.selectedLinkIndex === "" || this.selectedLinkIndex < 0)
+							this.selectedLinkIndex = this.filteredLinks.length - 1;
+						else this.selectedLinkIndex--;
+					},
+					goToUrl() {
+						let currentLink = this.filteredLinks[this.selectedLinkIndex];
+						window.location = currentLink.url;
+					},
+				};
+			}
+		</script>
+	</body>
+</html>

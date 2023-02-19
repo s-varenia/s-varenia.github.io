@@ -106,3 +106,23 @@ This text is ___really important___.
 This text is __*really important*__.  
 This text is **_really important_**.  
 This is really**_very_**important text.
+
+![alt](https://bit.ly/33B4VxM "shih-tzu" =80x120)
+
+Markdown
+: Інструмент перетворення тексту в HTML
+
+Філософія Markdown
+: Мова `Markdown` покликана бути такою ж простою для читання та простотою для написання, наскільки це можливо
+
+StackEdit
+: Редактор `Markdown` в браузері
+
+Автори
+: Джон Грубер
+: Бенуа Швеблін
+
+_[HTML]: HyperText Markup Language
+_[CSS]: Cascading Style Sheets
+_[JS]: JavaScript
+_[URL]: Uniform Resource Locator \*[MD]: Markdown
