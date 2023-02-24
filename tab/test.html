@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+	<body>
+		<ul x-data="alpineInstance()">
+			<template x-for="link in sort" :key="index">
+				<li x-text="link.title"></li>
+			</template>
+		</ul>
+		<script>
+			function alpineInstance() {
+				return {
+					links: [
+						{ url: 'https://www.google.com/', title: 'Google', category: 'category - 3' },
+						{ url: 'https://www.facebook.com/', title: 'Facebook', category: 'category - 1' },
+						{ url: 'https://www.youtube.com/', title: 'YouTube', category: 'category - 2' },
+						{ url: 'https://github.com/', title: 'Github', category: 'category - 2' },
+						{ url: 'https://codepen.io/your-work', title: 'Codepen', category: 'category - 2' },
+						{ url: 'https://docsify.js.org/#/ru-ru/', title: 'Docsify', category: 'category - 3' },
+						{ url: 'https://rozetka.com.ua/', title: 'Rozetka', category: 'category - 1' },
+						{ url: 'https://varenia.com/', title: 'VARENIA', category: 'category - 4' },
+						{ url: 'https://apple.com/', title: 'Apple', category: 'category - 5' },
+						{ url: 'https://amazone.com/', title: 'Amazone', category: 'category - 5' },
+					],
+					sort() {
+						return this.links.sort((a, b) => a.category.localeCompare(b.category));
+					},
+				};
+			}
+		</script>
+	</body>
+</html>

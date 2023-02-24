@@ -1,0 +1,46 @@
+<h1>Полезные ссылки</h1>
+<div
+	x-data="{
+	links: {
+		'Документация': [
+			{url: 'https://developer.mozilla.org/en-US/docs/Web/HTML', title: 'HTML Mozilla', description: 'HTML от mozilla.org'},
+			{url: 'https://developer.mozilla.org/en-US/docs/Web/CSS', title: 'CSS Mozilla', description: 'CSS от mozilla.org'},
+			{url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', title: 'JavaScript Mozilla', description: 'JavaScript от mozilla.org'},
+			{url: 'https://www.w3schools.com/tags/default.asp', title: 'HTML W3Schools', description: 'HTML от w3schools.com'},
+			{url: 'https://www.w3schools.com/cssref/index.php', title: 'CSS W3Schools', description: 'CSS от w3schools.com'},
+			{url: 'https://www.w3schools.com/js/default.asp', title: 'JavaScript W3Schools', description: 'JavaScript от w3schools.com'},
+			{url: 'http://htmlbook.ru/html', title: 'HTML htmlbook', description: 'HTML от htmlbook.ru'},
+			{url: 'http://htmlbook.ru/css', title: 'CSS htmlbook', description: 'CSS от htmlbook.ru'},
+			{url: 'https://www.markdownguide.org/cheat-sheet/', title: 'Markdown', description: 'Markdown от markdownguide.org'},
+		],
+		'CSS фреймворки': [
+			{url: 'https://getbootstrap.com/', title: 'Bootstrap', description: 'HTML, CSS и JS фреймворк'},
+			{url: 'https://tailwindcss.com/', title: 'Tailwind CSS', description: 'CSS фреймворк (независимый от стиля)'},
+			{url: 'https://get.foundation/sites.html', title: 'Foundation for Sites', description: 'HTML, CSS и JS фреймворк'},
+			{url: 'https://get.foundation/emails.html', title: 'Foundation for Emails', description: 'фреймворк для верстки Email'},
+			{url: 'https://bulma.io/', title: 'Bulma', description: 'CSS фреймворк'},
+			{url: 'http://getskeleton.com/', title: 'Skeleton', description: 'простой CSS фреймворк'},
+		],
+		'JavaScript фреймворки': [
+			{url: 'https://v3.ru.vuejs.org/', title: 'Vue.js', description: 'JS фреймворк'},
+			{url: 'https://alpinejs.dev/', title: 'Alpine.js', description: 'простой и легкий JS фреймворк, похож на Vue.js'},
+		],
+		'Другое': [
+			{url: 'https://adam-marsden.co.uk/css-cheat-sheet', title: 'CSS Cheat Sheet', description: 'шпаргалка по CSS'},
+		]
+	}
+}">
+	<template x-for="(group, category) in links" :key="category">
+		<div>
+			<h3 x-text="category"></h3>
+			<ul class="pb-8 md:columns-2 xl:columns-3 gap-8">
+				<template x-for="(link, index) in group" :key="index">
+					<li class="relative w-full">
+						<img class="absolute -left-6 top-[5px]" width="16" height="16" x-bind:src="'https://www.google.com/s2/favicons?domain=' + link.url + '&sz=16'" />
+						<a x-bind:href="link.url" x-text="link.title"></a> - <span x-text="link.description"></span>
+					</li>
+				</template>
+			</ul>
+		</div>
+	</template>
+</div>
