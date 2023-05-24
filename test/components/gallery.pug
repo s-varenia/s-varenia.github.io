@@ -1,0 +1,23 @@
+-
+	let arrImages = [
+		{id: '', w: '', h: ''},
+		{id: '', w: '', h: ''},
+		{id: '', w: '', h: ''},
+		{id: '', w: '', h: ''},
+		{id: '', w: '', h: ''},
+		{id: '', w: '', h: ''},
+	]
+
+div(class="mb-10 md:mb-24" x-data="funcGallery")
+	div(class="px-4 whitespace-nowrap cursor-pointer active:cursor-grab overflow-hidden" 
+		x-on:mousedown="funcStart($el, $event)"
+		x-on:touchstart="funcStart($el, $event)"
+		x-on:mousemove="funcMove($el, $event)"
+		x-on:touchmove="funcMove($el, $event)"
+		x-on:mouseup="isDown = !isDown"
+		x-on:touchend="isDown = !isDown"
+		x-intersect.once="funcAutoMove($el)")
+
+		- let j = 0; 
+		while j < 10
+			img(class="inline max-w-none h-96 ml-5 first:ml-0" src=`https://source.unsplash.com/random/?web-design&${j++}` alt="" @click="console.log(`yes`)")

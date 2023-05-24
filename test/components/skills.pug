@@ -1,0 +1,42 @@
+-
+	let arrDesign = [
+		{name: 'Adobe Photoshop', scale: '3/4'},
+		{name: 'Adobe Illustraor', scale: '4/5'},
+		{name: 'Adobe InDesign', scale: '11/12'},
+		{name: 'Affinity Photo / Designer / Publisher', scale: '1/12'},
+	]
+
+	let arrDevelop = [
+		{name: 'HTML & CSS', scale: '11/12'},
+		{name: 'JavaScript', scale: '8/12'},
+		{name: 'PHP', scale: '5/12'},
+		{name: 'Google Script', scale: '7/12'},
+	]
+
+div(class="mb-10 md:mb-24")
+	div(class="mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
+		//- заголовок раздела
+		div(class="text-center mb-5")
+			+h4(`Skills`)
+			h2(class="pb-3 text-3xl md:text-4xl font-bold") My skills & Expertise
+			p(class="max-w-lg inline-block") Below you can look at some of my skills levels, it's situation when I rate myself and I am recommend you scroll little down and look at my works.
+
+		div(class="flex flex-col gap-5 md:flex-row")
+
+			div(class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true")
+				h3(class="text-2xl md:text-3xl text-center font-bold md:text-right") Design
+				//- перечень скилов дизайна
+				each item in arrDesign
+					div(class="text-left md:text-right")
+						div(class="")= item.name
+						div(class="h-1 bg-gray-100")
+							div(class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class=`{'w-${item.scale}': shown }`)
+
+			div(class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true")
+				h3(class="text-2xl md:text-3xl text-center font-bold md:text-left") Develop
+				//- перечень скилов в разработке
+				each item in arrDevelop
+					div(class="text-left md:text-left")
+						div(class="")= item.name
+						div(class="h-1 bg-gray-100")
+							div(class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400" :class=`{'w-${item.scale}': shown }`)

@@ -1,0 +1,29 @@
+//- подключаем миксины
+include components/mixin.pug
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Hello World
+		link(href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Roboto+Flex:wght@200;300;400;700;900&display=swap" rel="stylesheet")
+		script(src=`https://cdn.tailwindcss.com`)
+		script(src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.12.1/dist/cdn.min.js" defer)
+		script(src=`https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js` defer)
+		style(type="text/css").
+			[x-cloak] { display: none !important; }
+	body(class="min-w-[375px]")
+		//- подключаем компонент меню
+		include components/header.pug
+		//- подключаем блок с приветствием
+		include components/hello.pug
+		//- подключаем блок с сервисами
+		include components/services.pug
+		//- подключаем блок с умениями
+		include components/skills.pug
+		//- подключаем блок с галереей
+		include components/gallery.pug
+		script
+			include js/script.js

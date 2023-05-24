@@ -1,0 +1,11 @@
+div(class="mb-10 md:mb-24")
+	div(class="flex flex-col gap-5 mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
+		//- заголовок раздела
+		div(class="text-center")
+			+h4(`Services`)
+			h2(class="text-3xl md:text-4xl font-bold") What can I do for you?
+		//- описание сервисов
+		each name in [`Design<br>Quality`, `Powerful<br>Options`, `Long term<br>Support`]	
+			div(class="flex flex-col gap-5 px-10 py-10 bg-gray-100 sm:flex-row sm:items-center sm:justify-center lg:py-20")
+				h3(class="text-5xl text-center sm:text-right font-bold first-line:font-light sm:w-1/2 lg:w-4/12 lg:text-6xl")!=name
+				p(class="text-sm text-justify sm:w-1/2 lg:w-4/12") Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis optio laboriosam neque, cupiditate dolor possimus dolores doloremque ab cum error dignissimos aliquid hic alias voluptate minima reprehenderit labore quam?Fugiat, quos eveniet.

@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hello World</title><link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;family=Roboto+Flex:wght@200;300;400;700;900&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.12.1/dist/cdn.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js" defer></script><style type="text/css">[x-cloak] { display: none !important; }</style></head><body class="min-w-[375px]"><div class="relative px-4 w-full" x-data="funcOpenMenu"><nav class="h-24 flex items-center justify-between mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-7xl"><a class="text-3xl text-gray-900 font-light after:text-gray-200 sm:after:content-['sm'] md:after:content-['md'] lg:after:content-['lg'] xl:after:content-['xl'] 2xl:after:content-['2xl']" href="#">VARENIA</a><button class="z-30 text-gray-900 w-8 h-8 relative focus:outline-none" @click="clickMenuBtn"><span class="sr-only">Open main menu</span><div class="block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"><span class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-2.5" :class="{'rotate-45': open,' -translate-y-2.5': !open }" aria-hidden="true"></span><span class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-px" :class="{'opacity-0': open }" aria-hidden="true"></span><span class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out translate-y-2" :class="{'-rotate-45': open, ' translate-y-2': !open}" aria-hidden="true"></span></div></button><div class="fixed top-0 left-0 w-full h-full flex justify-center items-center overflow-x-hidden bg-white" x-show="open" x-transition.opacity.duration.500ms x-cloak><ul class="flex flex-col gap-4 m-auto"><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 0</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 1</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 2</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 3</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 4</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 5</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 6</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 7</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 8</a></li><li class="test-roboto font-normal uppercase text-xl"><a class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#">Menu name 9</a></li></ul></div></nav></div><div class="mb-10 md:mb-24 bg-gray-100 bg-contain bg-[center_left_-20rem] 2xl:bg-left bg-no-repeat lg:bg-[url('img/hello-bg.jpg')]"><div class="flex mx-auto px-4 py-10 md:py-24 md:max-w-3xl lg:max-w-5xl lg:justify-end xl:max-w-7xl"><div class="flex flex-col gap-5 font-sans text-sm text-justify lg:w-8/12 lg:px-20 lg:py-10 lg:bg-white"><div class="text-center md:text-left"><h4 class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white">Hi everybody, I am</h4><h1 class="text-4xl md:text-5xl font-bold">Web & Print<br>Graphic Design<br>Specialist</h1></div><p>My name is Sergey. I'm a graphic designer with experience in marketing materials, layout and print/web design, social media graphics, logo and brand identity design, presentation development and more.</p><p>My main tools for work are Adobe Indesign, Adobe Photoshop, Adobe Illustrator, Corel Draw, Google tools, MsOffice. I provide clean, professional and high-quality graphic design services within several days or faster.</p><p>Take a look at my portfolio and don't hesitate to contact me if you have any further questions.</p></div></div></div><div class="mb-10 md:mb-24"><div class="flex flex-col gap-5 mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl"><div class="text-center"><h4 class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white">Services</h4><h2 class="text-3xl md:text-4xl font-bold">What can I do for you?</h2></div><div class="flex flex-col gap-5 px-10 py-10 bg-gray-100 sm:flex-row sm:items-center sm:justify-center lg:py-20"><h3 class="text-5xl text-center sm:text-right font-bold first-line:font-light sm:w-1/2 lg:w-4/12 lg:text-6xl">Design<br>Quality</h3><p class="text-sm text-justify sm:w-1/2 lg:w-4/12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis optio laboriosam neque, cupiditate dolor possimus dolores doloremque ab cum error dignissimos aliquid hic alias voluptate minima reprehenderit labore quam?Fugiat, quos eveniet.</p></div><div class="flex flex-col gap-5 px-10 py-10 bg-gray-100 sm:flex-row sm:items-center sm:justify-center lg:py-20"><h3 class="text-5xl text-center sm:text-right font-bold first-line:font-light sm:w-1/2 lg:w-4/12 lg:text-6xl">Powerful<br>Options</h3><p class="text-sm text-justify sm:w-1/2 lg:w-4/12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis optio laboriosam neque, cupiditate dolor possimus dolores doloremque ab cum error dignissimos aliquid hic alias voluptate minima reprehenderit labore quam?Fugiat, quos eveniet.</p></div><div class="flex flex-col gap-5 px-10 py-10 bg-gray-100 sm:flex-row sm:items-center sm:justify-center lg:py-20"><h3 class="text-5xl text-center sm:text-right font-bold first-line:font-light sm:w-1/2 lg:w-4/12 lg:text-6xl">Long term<br>Support</h3><p class="text-sm text-justify sm:w-1/2 lg:w-4/12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis optio laboriosam neque, cupiditate dolor possimus dolores doloremque ab cum error dignissimos aliquid hic alias voluptate minima reprehenderit labore quam?Fugiat, quos eveniet.</p></div></div></div><div class="mb-10 md:mb-24"><div class="mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl"><div class="text-center mb-5"><h4 class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white">Skills</h4><h2 class="pb-3 text-3xl md:text-4xl font-bold">My skills & Expertise</h2><p class="max-w-lg inline-block">Below you can look at some of my skills levels, it's situation when I rate myself and I am recommend you scroll little down and look at my works.</p></div><div class="flex flex-col gap-5 md:flex-row"><div class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true"><h3 class="text-2xl md:text-3xl text-center font-bold md:text-right">Design</h3><div class="text-left md:text-right"><div>Adobe Photoshop</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class="{'w-3/4': shown }"></div></div></div><div class="text-left md:text-right"><div>Adobe Illustraor</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class="{'w-4/5': shown }"></div></div></div><div class="text-left md:text-right"><div>Adobe InDesign</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class="{'w-11/12': shown }"></div></div></div><div class="text-left md:text-right"><div>Affinity Photo / Designer / Publisher</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class="{'w-1/12': shown }"></div></div></div></div><div class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true"><h3 class="text-2xl md:text-3xl text-center font-bold md:text-left">Develop</h3><div class="text-left md:text-left"><div>HTML &amp; CSS</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400" :class="{'w-11/12': shown }"></div></div></div><div class="text-left md:text-left"><div>JavaScript</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400" :class="{'w-8/12': shown }"></div></div></div><div class="text-left md:text-left"><div>PHP</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400" :class="{'w-5/12': shown }"></div></div></div><div class="text-left md:text-left"><div>Google Script</div><div class="h-1 bg-gray-100"><div class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400" :class="{'w-7/12': shown }"></div></div></div></div></div></div></div><div class="mb-10 md:mb-24" x-data="funcGallery"><div class="px-4 whitespace-nowrap cursor-pointer active:cursor-grab overflow-hidden" x-on:mousedown="funcStart($el, $event)" x-on:touchstart="funcStart($el, $event)" x-on:mousemove="funcMove($el, $event)" x-on:touchmove="funcMove($el, $event)" x-on:mouseup="isDown = !isDown" x-on:touchend="isDown = !isDown" x-intersect.once="funcAutoMove($el)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;0" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;1" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;2" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;3" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;4" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;5" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;6" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;7" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;8" alt="" @click="console.log(`yes`)"><img class="inline max-w-none h-96 ml-5 first:ml-0" src="https://source.unsplash.com/random/?web-design&amp;9" alt="" @click="console.log(`yes`)"></div></div><script>tailwind.config = {
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['"Roboto Flex"', 'sans-serif'],
+				mono: ['"Fira Mono"', 'monospace'],
+			},
+			colors: {
+				brown: {
+					50: '#f9f7f3',
+					100: '#f2ede2',
+					200: '#e4d8c4',
+					300: '#d3bf9e',
+					400: '#c5a781',
+					500: '#b3895c',
+					600: '#a67750',
+					700: '#8a6044',
+					800: '#704f3c',
+					900: '#5b4133',
+					950: '#312119',
+				},
+			},
+		},
+	},
+};
+
+function funcOpenMenu() {
+	return {
+		open: false,
+		clickMenuBtn() {
+			this.open = !this.open;
+			['fixed', 'w-full', 'overflow-y-scroll'].map((x) => document.body.classList.toggle(x));
+		},
+	};
+}
+
+function funcGallery() {
+	return {
+		isDown: false,
+		startX: 0,
+		scrollLeft: 0,
+		funcStart(element, event) {
+			if (this.autoSetInterval) clearInterval(this.autoSetInterval);
+			this.isDown = true;
+			this.startX = event.pageX || event.touches[0].pageX - element.offsetLeft;
+			this.scrollLeft = element.scrollLeft;
+		},
+		funcMove(element, event) {
+			if (!this.isDown) return;
+			event.preventDefault();
+			const x = event.pageX || event.touches[0].pageX - element.offsetLeft;
+			const dist = x - this.startX;
+			element.scrollLeft = this.scrollLeft - dist;
+		},
+		autoSetInterval: false,
+		funcAutoMove(element) {
+			console.log(this.scrollLeft);
+			if (this.isDown) return;
+			this.autoSetInterval = setInterval(() => {
+				element.scrollLeft += 1;
+			}, 40);
+		},
+	};
+}
+
+document.addEventListener('alpine:init', () => {
+	Alpine.store('app', {
+		openMenu: false,
+	});
+});
+</script></body></html>
