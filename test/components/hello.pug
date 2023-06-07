@@ -1,9 +1,7 @@
 div(class="mb-10 md:mb-24 bg-gray-100 bg-contain bg-[center_left_-20rem] 2xl:bg-left bg-no-repeat lg:bg-[url('img/hello-bg.jpg')]")
 	div(class="flex mx-auto px-4 py-10 md:py-24 md:max-w-3xl lg:max-w-5xl lg:justify-end xl:max-w-7xl")
-		div(class="flex flex-col gap-5 font-sans text-sm text-justify lg:w-8/12 lg:px-20 lg:py-10 lg:bg-white")
+		div(x-data class="flex flex-col gap-5 font-sans text-sm text-justify lg:w-8/12 lg:px-20 lg:py-10 lg:bg-white")
 			div(class="text-center md:text-left")
-				+h4(`Hi everybody, I am`)
-				h1(class="text-4xl md:text-5xl font-bold") Web & Print<br>Graphic Design<br>Specialist
-			p My name is Sergey. I'm a graphic designer with experience in marketing materials, layout and print/web design, social media graphics, logo and brand identity design, presentation development and more.
-			p My main tools for work are Adobe Indesign, Adobe Photoshop, Adobe Illustrator, Corel Draw, Google tools, MsOffice. I provide clean, professional and high-quality graphic design services within several days or faster.
-			p Take a look at my portfolio and don't hesitate to contact me if you have any further questions.
+				h4(x-text="$t('hello.subTitle')" class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white")
+				h1(x-html="$t('hello.title')" class="text-4xl md:text-5xl font-bold")
+			div(x-html="$t('hello.text')" class="flex flex-col gap-2")

@@ -1,17 +1,21 @@
+-
+	let arrNavigation = [`hello`, `services`, `skills`, `statistic`, `reviews`, `contacts`]
 
 div(class="relative px-4 w-full" x-data="funcOpenMenu")
 	nav(class="h-24 flex items-center justify-between mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
 		a(class="text-3xl text-gray-900 font-light after:text-gray-200 sm:after:content-['sm'] md:after:content-['md'] lg:after:content-['lg'] xl:after:content-['xl'] 2xl:after:content-['2xl']" href="#") VARENIA
-		//- кнопка меню
-		button(class="z-30 text-gray-900 w-8 h-8 relative focus:outline-none" @click="clickMenuBtn")
-			span(class="sr-only") Open main menu
-			div(class="block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2")
-				span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-2.5" :class="{'rotate-45': open,' -translate-y-2.5': !open }" aria-hidden="true")
-				span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-px" :class="{'opacity-0': open }" aria-hidden="true")
-				span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out translate-y-2" :class="{'-rotate-45': open, ' translate-y-2': !open}" aria-hidden="true")
+		div(class="flex items-center gap-5")
+			button(@click="funcChangeLang" x-text="currentLangTo" class="uppercase")
+			//- кнопка меню
+			button(class="z-30 text-gray-900 w-8 h-8 relative focus:outline-none" @click="clickMenuBtn")
+				span(class="sr-only") Open main menu
+				div(class="block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2")
+					span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-2.5" :class="{'rotate-45': open,' -translate-y-2.5': !open }" aria-hidden="true")
+					span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out -translate-y-px" :class="{'opacity-0': open }" aria-hidden="true")
+					span(class="block absolute h-0.5 w-8 bg-gray-900 transform transition duration-500 ease-in-out translate-y-2" :class="{'-rotate-45': open, ' translate-y-2': !open}" aria-hidden="true")
 		div(class="fixed top-0 left-0 w-full h-full flex justify-center items-center overflow-x-hidden bg-white" x-show="open" x-transition.opacity.duration.500ms x-cloak)
-			ul(class="flex flex-col gap-4 m-auto")
-				- let i = 0; 
-				while i < 10
-					li(class="test-roboto font-normal uppercase text-xl")
-						a(class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4" href="#")= `Menu name ${i++}`
+			ul(x-data class="flex flex-col gap-4 m-auto")
+
+				each item, index in arrNavigation
+					li(class="font-roboto font-normal uppercase text-xl text-center")
+						a(x-text=`$t('${item}.urlTitle')` :href=`$t('${item}.url')` class="duration-300 hover:text-yellow-600 active:text-yellow-800 focus:outline-none focus:underline focus:underline-offset-4")

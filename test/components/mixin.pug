@@ -1,3 +1,9 @@
 //- уникальный заголовок р4
 mixin h4(title)
 	h4(class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white")= title
+
+//- заголовки на главной странице
+mixin index-title(subtitle, title)
+	div(class="text-center")
+		h4(class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white")= subtitle
+		h2(class="text-3xl md:text-5xl font-bold")= title

@@ -16,15 +16,16 @@
 div(class="mb-10 md:mb-24")
 	div(class="mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
 		//- заголовок раздела
-		div(class="text-center mb-5")
-			+h4(`Skills`)
-			h2(class="pb-3 text-3xl md:text-4xl font-bold") My skills & Expertise
-			p(class="max-w-lg inline-block") Below you can look at some of my skills levels, it's situation when I rate myself and I am recommend you scroll little down and look at my works.
+		div(x-data class="mb-5 text-center")
+			div(class="text-center")
+				h4(x-text="$t('skills.subTitle')" class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white")
+				h2(x-text="$t('skills.title')" class="text-3xl md:text-5xl font-bold")
+			p(x-text="$t('skills.text')" class="max-w-lg inline-block pt-3")
 
 		div(class="flex flex-col gap-5 md:flex-row")
 
 			div(class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true")
-				h3(class="text-2xl md:text-3xl text-center font-bold md:text-right") Design
+				h3(x-text="$t('skills.design')" class="text-2xl md:text-3xl text-center font-bold md:text-right")
 				//- перечень скилов дизайна
 				each item in arrDesign
 					div(class="text-left md:text-right")
@@ -33,7 +34,7 @@ div(class="mb-10 md:mb-24")
 							div(class="h-1 w-px transform scale-x-100 duration-1000 bg-brown-400 md:float-right" :class=`{'w-${item.scale}': shown }`)
 
 			div(class="flex flex-col gap-4 md:w-1/2" x-data="{ shown: false }" x-intersect.half="shown = true")
-				h3(class="text-2xl md:text-3xl text-center font-bold md:text-left") Develop
+				h3(x-text="$t('skills.develop')" class="text-2xl md:text-3xl text-center font-bold md:text-left")
 				//- перечень скилов в разработке
 				each item in arrDevelop
 					div(class="text-left md:text-left")

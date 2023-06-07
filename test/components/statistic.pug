@@ -1,0 +1,18 @@
+-
+	let arrStatistic = [
+		{number: 25, title: 'clients', wordBold: 'Happy', wordNormal: 'Clients', class: ''},
+		{number: 30, title: 'projects', wordBold: 'Completed', wordNormal: 'Projects', class: ''},
+		{number: 100, title: 'success', wordBold: 'Job', wordNormal: 'Success', class: ` after:content-['%'] after:text-7xl after:font-light`},
+	]
+
+div(class="mb-10 md:mb-24")
+	div(class="flex flex-col gap-y-4 mx-auto px-4 md:flex-row md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
+
+		each item in arrStatistic
+			div(class="text-center md:w-1/3")
+				div(class=`text-9xl font-thin text-brown-400${item.class}` 
+					x-data="funcStatistic()"
+					x-text="counter"
+					x-intersect.half=`animate(${item.number})`
+				)
+				div(x-html=`$t('statistic.${item.title}')` class="text-lg font-light") #[b.font-bold #{item.wordBold}] #{item.wordNormal}

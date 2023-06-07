@@ -1,0 +1,23 @@
+div(class="mb-10 md:mb-24")
+	div(x-data class="flex flex-col gap-5 mx-auto px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl")
+		//- заголовок раздела
+		div(class="text-center")
+			h4(x-text="$t('reviews.subTitle')" class="inline-block px-1.5 mb-4 bg-brown-400 text-base text-white")
+			h2(x-text="$t('reviews.title')" class="text-3xl md:text-5xl font-bold")
+		//- описание сервисов
+		div(class="flex flex-col gap-4")
+			- let countR = 0;
+			while countR < 3
+				div(class="relative flex justify-center pt-16 pb-5 px-5 bg-gray-100 md:pt-10")
+					div(class="absolute top-3 inset-x-auto md:left-8 text-5xl text-gray-300 fa-solid fa-quote-left md:text-7xl")
+					div(class="relative flex flex-col gap-5 text-center md:w-9/12")
+						h3(x-text=`$t('reviews.review.${countR}.title')` class="text-2xl font-bold")
+						p(x-text=`$t('reviews.review.${countR}.text')` class="text-sm text-justify md:text-lg md:text-center")
+						p(x-text=`$t('reviews.review.${countR}.from')` class="text-xs before:content-[' - ']")
+						div(class="text-2xl text-brown-400")
+							i.fa-solid.fa-star
+							i.fa-solid.fa-star
+							i.fa-solid.fa-star
+							i.fa-solid.fa-star
+							i.fa-solid.fa-star
+				- countR++
