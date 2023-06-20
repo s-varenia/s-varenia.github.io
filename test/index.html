@@ -5,9 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Test page</title>
 		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
-		<div id="app">{{ message }}</div>
+		<div id="app">
+			<h1>{{ message }}</h1>
+			<div v-for="(group, category) in links" :key="category">
+				<h3>{{ category }}</h3>
+				<ul class="pb-8 md:columns-2 xl:columns-3 gap-8">
+					<li v-for="(link, index) in group" :key="index" class="relative w-full">
+						<img class="absolute -left-6 top-[5px]" width="16" height="16" :src="'https://www.google.com/s2/favicons?domain=' + link.url + '&sz=16'" />
+						<a :href="link.url">{{ link.title }}</a> - <span>{{ link.description }}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<script>
 			const { createApp } = Vue;
@@ -15,7 +27,36 @@
 			createApp({
 				data() {
 					return {
-						message: 'Hello Vue!',
+						message: 'Полезные ссылки',
+						// prettier-ignore
+						links: {
+							'Документация': [
+								{ url: 'https://developer.mozilla.org/en-US/docs/Web/HTML', title: 'HTML Mozilla', description: 'HTML от mozilla.org' },
+								{ url: 'https://developer.mozilla.org/en-US/docs/Web/CSS', title: 'CSS Mozilla', description: 'CSS от mozilla.org' },
+								{ url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', title: 'JavaScript Mozilla', description: 'JavaScript от mozilla.org' },
+								{ url: 'https://www.w3schools.com/tags/default.asp', title: 'HTML W3Schools', description: 'HTML от w3schools.com' },
+								{ url: 'https://www.w3schools.com/cssref/index.php', title: 'CSS W3Schools', description: 'CSS от w3schools.com' },
+								{ url: 'https://www.w3schools.com/js/default.asp', title: 'JavaScript W3Schools', description: 'JavaScript от w3schools.com' },
+								{ url: 'http://htmlbook.ru/html', title: 'HTML htmlbook', description: 'HTML от htmlbook.ru' },
+								{ url: 'http://htmlbook.ru/css', title: 'CSS htmlbook', description: 'CSS от htmlbook.ru' },
+								{ url: 'https://www.markdownguide.org/cheat-sheet/', title: 'Markdown', description: 'Markdown от markdownguide.org' },
+							],
+							'CSS фреймворки': [
+								{ url: 'https://getbootstrap.com/', title: 'Bootstrap', description: 'HTML, CSS и JS фреймворк' },
+								{ url: 'https://tailwindcss.com/', title: 'Tailwind CSS', description: 'CSS фреймворк (независимый от стиля)' },
+								{ url: 'https://get.foundation/sites.html', title: 'Foundation for Sites', description: 'HTML, CSS и JS фреймворк' },
+								{ url: 'https://get.foundation/emails.html', title: 'Foundation for Emails', description: 'фреймворк для верстки Email' },
+								{ url: 'https://bulma.io/', title: 'Bulma', description: 'CSS фреймворк' },
+								{ url: 'http://getskeleton.com/', title: 'Skeleton', description: 'простой CSS фреймворк' },
+							],
+							'JavaScript фреймворки': [
+								{ url: 'https://ua.vuejs.org/', title: 'Vue.js', description: 'JS фреймворк' },
+								{ url: 'https://alpinejs.dev/', title: 'Alpine.js', description: 'простой и легкий JS фреймворк, похож на Vue.js' },
+							],
+							'Другое': [
+								{ url: 'https://adam-marsden.co.uk/css-cheat-sheet', title: 'CSS Cheat Sheet', description: 'шпаргалка по CSS' }
+							],
+						},
 					};
 				},
 			}).mount('#app');
