@@ -1,13 +1,15 @@
-<h1>{{ message }}</h1>
-<div v-for="(group, category) in links" :key="category">
-	<h3>{{ category }}</h3>
-	<ul class="pb-8 md:columns-2 xl:columns-3 gap-8">
-		<li v-for="(link, index) in group" :key="index" class="relative w-full">
-			<img class="absolute -left-6 top-[5px]" width="16" height="16" :src="'https://www.google.com/s2/favicons?domain=' + link.url + '&sz=16'" />
-			<a :href="link.url">{{ link.title }}</a> - <span>{{ link.description }}</span>
-		</li>
-	</ul>
-</div>
+<article class="markdown-section" id="main" data-v-app="">
+	<h1>{{ message }}</h1>
+	<div v-for="(group, category) in links" :key="category">
+		<h3>{{ category }}</h3>
+		<ul class="pb-8 md:columns-2 xl:columns-3 gap-8">
+			<li v-for="(link, index) in group" :key="index" class="relative w-full">
+				<img class="absolute -left-6 top-[5px]" width="16" height="16" :src="'https://www.google.com/s2/favicons?domain=' + link.url + '&sz=16'" />
+				<a :href="link.url">{{ link.title }}</a> - <span>{{ link.description }}</span>
+			</li>
+		</ul>
+	</div>
+</article>
 
 <script>
 	Vue.createApp({
