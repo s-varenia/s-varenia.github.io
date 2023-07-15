@@ -25,6 +25,9 @@
 				// coverpage: true, // страница приветствия
 				// onlyCover: true,
 				// loadNavbar: true,
+				// alias: {
+				// 	'/gist': 'https://gist.githubusercontent.com/s-varenia/6619b7e6b907579f9b07a7061e89c456/raw/34728fa31b470512affcbfd7631d3ed68c120299/Readme.md',
+				// },
 				// плагин копирования кода
 				copyCode: {
 					buttonText: 'Copy',
@@ -53,12 +56,15 @@
 							// console.log(vm.route.path);
 						});
 						hook.mounted(function () {
-							console.log(vm);
-							if (vm.route.path === `/`) document.body.classList.add('close');
+							if (vm.route.path === `/` && !Docsify.util.isMobile) document.body.classList.add('close');
 							// Docsify.dom.find('.app-name-link').innerHTML = 'hello';
 							// vm.config.name = 'hello';
 						});
 						hook.beforeEach(function (markdown) {
+							// console.log(`beforeEach`);
+							// console.log(vm.frontmatter);
+							// console.log(Boolean(vm.frontmatter.sidebarClose));
+							// if (vm.frontmatter.sidebar && !Docsify.util.isMobile) Docsify.dom.toggleClass(Docsify.dom.$.body, 'close');
 							// console.log(vm);
 							document.title = 'Hello World';
 							// if (vm.route.path == `/`) {
@@ -69,14 +75,23 @@
 							if (vm.route.path === `/` || vm.route.path === `/page3`) document.querySelector(`#main`).classList.remove(`documentation`);
 							else document.querySelector(`#main`).classList.add(`documentation`);
 						});
+						hook.afterEach(function (html) {
+							// console.log(`afterEach`);
+							// console.log(vm.frontmatter);
+							// console.log(html);
+							// return html;
+						});
 						hook.doneEach(function (markdown) {
+							// console.log(`doneEach`);
+							// console.log(vm.frontmatter);
 							// vm.config.name = 'Hello!';
 							// console.log(vm.config.name);
 							// console.log(vm);
 						});
-						hook.afterEach(function (html) {
-							// console.log(html);
-							// return html;
+						hook.ready(function () {
+							// console.log(`ready`);
+							// console.log(vm.frontmatter);
+							if (vm.frontmatter.sidebar && !Docsify.util.isMobile) Docsify.dom.toggleClass(Docsify.dom.$.body, 'close');
 						});
 					},
 					// https://github.com/docsifyjs/docsify/issues/1235#issuecomment-1200060436
@@ -143,5 +158,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/plugins/front-matter.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/plugins/search.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+		<script src="varenia-add-links-docsify.js"></script>
 	</body>
 </html>
