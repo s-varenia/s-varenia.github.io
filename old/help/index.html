@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+</head>
+<body>
+	<div id="result"></div>
+
+	<script>
+		var converter = new showdown.Converter({customizedHeaderId: true});
+
+		fetch('https://api.github.com/repos/s-varenia/s-varenia.github.io/contents/help/Шпора - Регулярные выражения.md')
+		.then(response => response.json())
+		.then(data => {
+			var md = decodeURIComponent(escape(atob(data.content)));
+			var html = converter.makeHtml(md);
+			document.getElementById("result").innerHTML = html;
+			console.log(data); // Prints result from `response.json()` in getRequest
+		})
+		.catch(error => console.error(error))
+	</script>
+</body>
+</html>
