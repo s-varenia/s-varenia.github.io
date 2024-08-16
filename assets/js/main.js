@@ -8,7 +8,7 @@ window.$docsify = {
 	// themeColor: '#3F51B5',
 	// relativePath: true, // относительный путь
 	loadSidebar: true, // боковая панель из файла "_sidebar.md"
-	routerMode: 'history', // default: 'hash'
+	// routerMode: 'history', // default: 'hash'
 	search: {
 		maxAge: 86400000, // срок действия, по умолчанию один день
 		paths: 'auto', // или 'auto'
