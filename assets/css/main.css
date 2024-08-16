@@ -1,0 +1,18 @@
+:root {
+	--theme-hue: 153;
+	--theme-saturation: 47%;
+	--theme-lightness: 49%;
+
+	--sidebar-width: 20rem;
+	/* --content-max-width: 60em; */
+}
+
+.section-link {
+	position: relative;
+}
+
+.section-link::before {
+	content: "-" !important;
+	position: absolute;
+	left: 5px;
+}
