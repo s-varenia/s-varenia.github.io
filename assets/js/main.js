@@ -1,6 +1,7 @@
 window.$docsify = {
 	name: 'VARENIA', // название сайта на боковой панели
-	coverpage: true,
+	// coverpage: true,
+	executeScript: true,
 	// onlyCover: true,
 	homepage: '_homepage.md',
 	subMaxLevel: 2, // max уровень вложенности оглавления в Sidebar панели
@@ -24,5 +25,3 @@ window.$docsify = {
 	},
 	vueGlobalOptions: {},
 };
-
-console.log(window.$docsify);
