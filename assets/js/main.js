@@ -10,6 +10,9 @@ window.$docsify = {
 	loadSidebar: true, // боковая панель из файла "_sidebar.md"
 	// routerMode: 'history', // default: 'hash'
 	formatUpdated: '{MM}/{DD} {HH}:{mm}',
+	formatUpdated: function (time) {
+		return `>last update time: ${time}`;
+	},
 	timeUpdater: {
 		text: '>last update time: {docsify-updated}',
 		formatUpdated: '{YYYY}/{MM}/{DD}',
