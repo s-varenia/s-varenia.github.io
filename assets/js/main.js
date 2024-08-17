@@ -13,11 +13,11 @@ window.$docsify = {
 	formatUpdated: function (time) {
 		return `>last update time: ${time}`;
 	},
-	timeUpdater: {
-		text: '>last update time: {docsify-updated}',
-		formatUpdated: '{YYYY}/{MM}/{DD}',
-		whereToPlace: 'bottom', // "top" or "bottom", default to "bottom"
-	},
+	// timeUpdater: {
+	// 	text: '>last update time: {docsify-updated}',
+	// 	formatUpdated: '{YYYY}/{MM}/{DD}',
+	// 	whereToPlace: 'bottom', // "top" or "bottom", default to "bottom"
+	// },
 	search: {
 		maxAge: 86400000, // срок действия, по умолчанию один день
 		paths: 'auto', // или 'auto'
