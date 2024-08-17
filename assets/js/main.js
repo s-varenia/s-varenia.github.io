@@ -9,6 +9,7 @@ window.$docsify = {
 	// relativePath: true, // относительный путь
 	loadSidebar: true, // боковая панель из файла "_sidebar.md"
 	// routerMode: 'history', // default: 'hash'
+	formatUpdated: '{MM}/{DD} {HH}:{mm}',
 	timeUpdater: {
 		text: '>last update time: {docsify-updated}',
 		formatUpdated: '{YYYY}/{MM}/{DD}',
