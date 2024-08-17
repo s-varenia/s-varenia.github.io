@@ -9,15 +9,12 @@ window.$docsify = {
 	// relativePath: true, // относительный путь
 	loadSidebar: true, // боковая панель из файла "_sidebar.md"
 	// routerMode: 'history', // default: 'hash'
-	formatUpdated: '{MM}/{DD} {HH}:{mm}',
 	formatUpdated: function (time) {
-		return `<div align='center'>last update time: ${time}</div>`;
+		const date = new Date(time);
+		const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+		const newDate = date.toLocaleDateString('uk-UA', options);
+		return `<div style='color:gray;font-size:10px;text-align:center'>Оновлено: ${newDate}</div>`;
 	},
-	// timeUpdater: {
-	// 	text: '>last update time: {docsify-updated}',
-	// 	formatUpdated: '{YYYY}/{MM}/{DD}',
-	// 	whereToPlace: 'bottom', // "top" or "bottom", default to "bottom"
-	// },
 	search: {
 		maxAge: 86400000, // срок действия, по умолчанию один день
 		paths: 'auto', // или 'auto'
