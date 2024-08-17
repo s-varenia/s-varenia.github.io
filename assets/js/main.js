@@ -11,7 +11,7 @@ window.$docsify = {
 	// routerMode: 'history', // default: 'hash'
 	formatUpdated: '{MM}/{DD} {HH}:{mm}',
 	formatUpdated: function (time) {
-		return `>last update time: ${time}`;
+		return `<div align='center'>last update time: ${time}</div>`;
 	},
 	// timeUpdater: {
 	// 	text: '>last update time: {docsify-updated}',
