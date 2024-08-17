@@ -10,4 +10,4 @@
 
 Значення 2 + 2 = {{ 2 + 2 }}
 
-Оновлено: {docsify-updated }
+Оновлено: {docsify-updated}
