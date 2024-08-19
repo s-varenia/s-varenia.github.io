@@ -2,11 +2,18 @@
 	--theme-hue: 153;
 	--theme-saturation: 47%;
 	--theme-lightness: 49%;
-
 	--sidebar-width: 20rem;
 	/* --content-max-width: 60em; */
-
+	--link-color: var(--theme-color);
 	--emoji-size: calc(var(--base-line-height)* .85em);
+}
+
+@media (prefers-color-scheme: dark) {
+
+	.sidebar,
+	code {
+		scrollbar-color: var(--mono-tint1) var(--mono-shade2);
+	}
 }
 
 .section-link {
@@ -14,7 +21,9 @@
 }
 
 .section-link::before {
-	content: "-" !important;
+	content: "•" !important;
 	position: absolute;
 	left: 5px;
+	color: var(--mono-tint1) !important;
+	font-weight: bold !important;
 }

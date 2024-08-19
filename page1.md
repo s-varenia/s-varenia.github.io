@@ -15,3 +15,5 @@
 <Button-counter></Button-counter>
 
 <Title-component title="Привіт">Hello World</Title-component>
+
+![Alt text](/assets/links/page1/image.png)
