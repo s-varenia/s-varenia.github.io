@@ -1,0 +1,22 @@
+<h1>HTML Page 4</h1>
+
+<div id="example">
+	<h2>{{ message }}</h2>
+</div>
+<title-component>Привіт Світ!</title-component>
+
+<script>
+	Vue.createApp({
+		data() {
+			return {
+				message: 'Привіт, Vue!',
+			};
+		},
+	}).mount('#example');
+</script>
+
+<style>
+	:root {
+		--content-max-width: 100%;
+	}
+</style>

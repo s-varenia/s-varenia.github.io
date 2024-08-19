@@ -18,3 +18,5 @@ title: Hello
 <p>2 + 2 = {{ 2 + 2 }}</p>
 
 {docsify-updated}
+
+<Title-component title="Привіт">Hello World</Title-component>

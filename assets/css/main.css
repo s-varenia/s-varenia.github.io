@@ -5,6 +5,8 @@
 
 	--sidebar-width: 20rem;
 	/* --content-max-width: 60em; */
+
+	--emoji-size: calc(var(--base-line-height)* .85em);
 }
 
 .section-link {

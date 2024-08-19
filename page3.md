@@ -11,3 +11,4 @@
 	<li v-for="i in 3">Item {{ i }}</li>
 </ul>
 <div style="color: red">Hello from page 3</div>
+<Title-component title="Привіт">Hello World</Title-component>

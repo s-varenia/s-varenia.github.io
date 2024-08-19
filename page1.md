@@ -8,6 +8,10 @@
 
 ## Приклад Vue інтерполяції <!-- {docsify-ignore} -->
 
-Значення 2 + 2 = {{ 2 + 2 }}
+:stuck_out_tongue_closed_eyes: Значення 2 + 2 = {{ 2 + 2 }} :factory:
 
 Оновлено: {docsify-updated}
+
+<Button-counter></Button-counter>
+
+<Title-component title="Привіт">Hello World</Title-component>
