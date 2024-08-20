@@ -7,6 +7,7 @@
 - [Страница 6](page6.md 'Заголовок для страницы 6')
 - [Markdown](md.md 'Markdown (md) синтаксис')
 - [Links](links.md 'Корисні посилання')
+- [InDesign (JavaScript)](id.md "Об'єктна модель Adobe InDesign CS6 (8.0) (JavaScript)")
 - **Links**
 - [Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
 - [Demo Sandbox](https://codesandbox.io/s/xv36w4695o)

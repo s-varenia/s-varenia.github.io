@@ -34,3 +34,10 @@ window.$docsify = {
 		},
 	},
 };
+
+// активировать поиск по нажатию Ctrl+Q
+window.addEventListener('keydown', function (event) {
+	if (event.ctrlKey && event.code === 'KeyQ') {
+		document.querySelector('.input-wrap input').focus();
+	}
+});

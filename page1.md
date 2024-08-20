@@ -17,3 +17,5 @@
 <Title-component title="Привіт">Hello World</Title-component>
 
 ![Alt text](/assets/links/page1/image.png)
+
+Це коментарій: <!-- This is a comment, it will not be included -->

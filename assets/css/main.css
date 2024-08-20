@@ -27,3 +27,7 @@
 	color: var(--mono-tint1) !important;
 	font-weight: bold !important;
 }
+
+.active>.section-link::before {
+	color: inherit !important;
+}
