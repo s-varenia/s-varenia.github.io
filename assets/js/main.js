@@ -1,16 +1,20 @@
 window.$docsify = {
-	name: 'VARENIA', // название сайта на боковой панели
-	executeScript: true,
-	homepage: '_homepage.md',
-	subMaxLevel: 2, // max уровень вложенности оглавления в Sidebar панели
-	executeScript: true,
-	loadSidebar: true, // боковая панель из файла "_sidebar.md"
+	name: 'VARENIA', // назва порталу на боковій панелі
+	executeScript: true, // виконувати скрипти
+	homepage: '_homepage.md', // головна сторінка
+	subMaxLevel: 2, // максимальний рівень вкладення
+	loadSidebar: true, // відображати бокову панель
+	alias: {
+		'/page5': '/page5.html',
+	},
+	// налаштування дати оновлення сторінки
 	formatUpdated: function (time) {
 		const date = new Date(time);
 		const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
 		const newDate = date.toLocaleDateString('uk-UA', options);
 		return `<div style='color:gray;font-size:10px;text-align:center'>Оновлено: ${newDate}</div>`;
 	},
+	// налаштування пошуку
 	search: {
 		maxAge: 86400000, // срок действия, по умолчанию один день
 		paths: 'auto', // или 'auto'
@@ -21,16 +25,26 @@ window.$docsify = {
 	vueGlobalOptions: {},
 	vueComponents: {
 		'button-counter': {
-			template: document.querySelector('#button-templ').innerHTML,
+			template: document.querySelector('#button-template').innerHTML,
 			data() {
 				return {
 					count: 0,
 				};
 			},
 		},
-		'title-component': {
-			template: '<h1>{{ title }} - <slot /></h1>',
-			props: ['title'],
+		// 'title-component': {
+		// 	template: '<h1><slot /></h1>',
+		// 	// props: ['title'],
+		// },
+	},
+};
+
+$docsify.vueComponents['title-component'] = {
+	template: '<h1>{{title}}: <slot /></h1>',
+	props: {
+		title: {
+			type: String,
+			default: 'Заголовок',
 		},
 	},
 };
