@@ -8,6 +8,9 @@
 	/* --content-max-width: 60em; */
 	--link-color: var(--theme-color);
 	--emoji-size: calc(var(--base-line-height)* .85em);
+
+	/* --cover-background-color: var(--mono-tint1); */
+	/* --cover-background-image: ''; */
 }
 
 @media (prefers-color-scheme: dark) {
