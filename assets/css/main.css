@@ -1,15 +1,37 @@
 @import "https://unpkg.com/open-props";
 
+
 :root {
 	--theme-hue: 153;
 	--theme-saturation: 47%;
 	--theme-lightness: 49%;
 	--sidebar-width: 20rem;
-	/* --content-max-width: 60em; */
 	--link-color: var(--theme-color);
 	--emoji-size: calc(var(--base-line-height)* .85em);
 
-	/* --cover-background-color: var(--mono-tint1); */
+
+	/* --primary-color: var(--gray-0); */
+
+	--bg-color: #ffffff;
+	--bg-secondary-color: #f3f3f6;
+	--color-primary: #14854F;
+	--color-lightGrey: #d2d6dd;
+	--color-grey: #747681;
+	--color-darkGrey: #3f4144;
+	--color-error: #d43939;
+	--color-success: #28bd14;
+	--grid-maxWidth: 120rem;
+	--grid-gutter: 2rem;
+	--font-size: 1rem;
+	--font-color: ;
+	--font-family-sans: ;
+	--font-family-mono: ;
+
+	/* --cover-color: #1d1d1f;
+	--cover-margin: 0;
+	--cover-max-width: 100%;
+	--cover-text-align: left;
+	--cover-background-color: #fcfcfd; */
 	/* --cover-background-image: ''; */
 }
 

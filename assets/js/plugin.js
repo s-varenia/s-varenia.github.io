@@ -13,6 +13,7 @@
 		// Вызывается при каждой загрузке страницы перед преобразованием новой разметки в HTML
 		hook.beforeEach(function (markdown) {
 			console.log('beforeEach');
+			console.log(vm.frontmatter);
 			// console.log(markdown);
 			return markdown;
 		});
@@ -33,6 +34,11 @@
 		// Вызывается один раз после рендеринга начальной страницы
 		hook.ready(function () {
 			console.log('ready');
+			console.log(vm);
+			if (vm.route.path === '/') {
+				document.body.classList.remove('ready-transition');
+				document.body.classList.remove('ready-spinner');
+			}
 		});
 	};
 

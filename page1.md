@@ -1,4 +1,11 @@
-# Hello World
+---
+text: 'Hello from Page1'
+meta-description: 'Описание первой страницы'
+---
+
+# Hello World {{ say }}
+
+Переменная: {{ text }}
 
 Всім привіт, я графічний дизайнер, мене звати {{2+2}}, я маю досвід у створенні маркетингових матеріалів, корпоративного стилю, дизайну для друку та вебу, графіки для соціальних мереж.
 
@@ -19,3 +26,5 @@
 ![Alt text](/assets/links/page1/image.png)
 
 Це коментарій: <!-- This is a comment, it will not be included -->
+
+<Card>Hello World!</Card>

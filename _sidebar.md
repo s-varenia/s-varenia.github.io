@@ -1,4 +1,5 @@
 - [Главная](/)
+- **Основной**
 - [Страница 1](page1.md 'Заголовок для страницы 1')
 - [Страница 2](page2.md 'Заголовок для страницы 2')
 - [Страница 3](page3.md 'Заголовок для страницы 3')
@@ -6,7 +7,7 @@
 - [Страница 5](page5 'Iframe')
 - [Страница 6](page6.md 'Заголовок для страницы 6')
 - [Markdown](md.md 'Markdown (md) синтаксис')
-- [Links](links.md 'Корисні посилання')
+- [Links](links.html 'Корисні посилання')
 - [InDesign (JavaScript)](id.md "Об'єктна модель Adobe InDesign CS6 (8.0) (JavaScript)")
 - **Links**
 - [Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
